@@ -1,0 +1,8 @@
+file can be downloaded from 
+https://yunliweb.its.unc.edu/FIREcaller/download.php
+
+
+cp MboI_hg19_40Kb_encodeBL_F_GC_M_FULL.txt F_GC_M_Mbol_40kb_el.hg19.txt
+sed -i '1d' F_GC_M_Mbol_40kb_el.hg19.txt
+sed -i 's/"//g' F_GC_M_Mbol_40kb_el.hg19.txt
+awk -v OFS="\t" '{print $1,$2,$3,$4,$5,$6}' F_GC_M_Mbol_40kb_el.hg19.txt > F_GC_M_Mbol_40kb_el.col6.hg19.txt
